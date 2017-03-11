@@ -1,0 +1,15 @@
+#header {
+  background-color: #000;
+  opacity: 0.9; }
+
+#registration {
+  margin-top: 100px; }
+
+body {
+  background: url(../assets/img/bg-main.jpg) center top no-repeat #000; }
+
+.main-view {
+  margin-top: 50px;
+  font-family: industrybook, Arial, sans-serif; }
+
+/*# sourceMappingURL=main.css.map */

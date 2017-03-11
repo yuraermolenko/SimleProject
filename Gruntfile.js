@@ -47,10 +47,10 @@ module.exports = function (grunt) {
       gruntfile: {
         files: ['Gruntfile.js']
       },
-      sass: {
-        files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer']
-      },
+      // sass: {
+      //   files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
+      //   tasks: ['sass:server', 'autoprefixer']
+      // },
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
@@ -177,31 +177,31 @@ module.exports = function (grunt) {
     },
 
     // Compiles Sass to CSS and generates necessary files if requested
-    sass: {
-      options: {
-        sourceMap: true,
-        includePaths: ['bower_components']
-        },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
-          ext: '.css'
-        }]
-      },
-      server: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
-          //dest: '<%= config.app %>/styles',
-          ext: '.css'
-        }]
-      }
-    },
+    // sass: {
+    //   options: {
+    //     sourceMap: true,
+    //     includePaths: ['bower_components']
+    //     },
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= config.app %>/styles',
+    //       src: ['*.{scss,sass}'],
+    //       dest: '.tmp/styles',
+    //       ext: '.css'
+    //     }]
+    //   },
+    //   server: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= config.app %>/styles',
+    //       src: ['*.{scss,sass}'],
+    //       dest: '.tmp/styles',
+    //       //dest: '<%= config.app %>/styles',
+    //       ext: '.css'
+    //     }]
+    //   }
+    // },
 
     // Add vendor prefixed styles
     autoprefixer: {
@@ -382,14 +382,14 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
-        'sass:server',
+        // 'sass:server',
         'copy:styles'
       ],
       test: [
         'copy:styles'
       ],
       dist: [
-        'sass',
+        // 'sass',
         'copy:styles',
         'imagemin',
         'svgmin'

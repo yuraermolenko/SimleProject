@@ -1,0 +1,17 @@
+{
+  "REGISTRATION": {
+    "NAME": "Name",
+    "EMAIL": "Email"
+  },
+  "HEADER": {
+    "HOME": "Home",
+    "LOBBY": "Lobby",
+    "SIGN_UP": "Sign Up!"
+  },
+  "ERRORS": {
+    "REGISTRATION": {
+      "NAME": "Please use only english characters and numbers",
+      "EMAIL": "Incorrect Email"
+    }
+  }
+}

@@ -2,24 +2,24 @@
  * Created by Yura on 11.03.2017.
  */
 'use strict';
-var LS = JSON.parse(localStorage.getItem('HS_Project')) || {};
+var LS = JSON.parse(localStorage.getItem('HS')) || {};
 
 angular.element(document).ready(function() {
-    angular.bootstrap(document, ['HS_Project']);
+    angular.bootstrap(document, ['HS']);
 });
 
 var roles = {
     Unauthorized: 0,
     Gamer: 1,
-    Admin: 2,
+    Admin: 2
 };
 
 if(typeof LS.roles == 'undefined') {
     LS.roles = ['Unauthorized'];
-    localStorage.setItem('HS_Project', JSON.stringify(LS));
+    localStorage.setItem('HS', JSON.stringify(LS));
 }
 
-var HS_Project = angular.module('HS_Project', [
+var HS = angular.module('HS', [
     'ngRoute',
     'angularLoad',
     'restangular',
@@ -31,30 +31,34 @@ var HS_Project = angular.module('HS_Project', [
     'HSDirectives',
     'constants',
     'ngFileUpload',
-    'ui.bootstrap'
+    'pascalprecht.translate'
 ]);
 
-HS_Project.config(['$routeProvider', 'CONFIG',
-    function ($routeProvider, CONFIG) {
+HS.config(['$routeProvider',
+    function ($routeProvider) {
         $routeProvider.
             when('/home', {
-            templateUrl: 'templates/home.html',
-            controller: "HomeController"
+                templateUrl: 'templates/home.html',
+                controller: "HomeController"
             }).
             when('/lobby', {
-            templateUrl: 'templates/lobby.html',
-            controller: "LobbyController"
+                templateUrl: 'templates/lobby.html',
+                controller: "LobbyController"
+            }).
+            when('/login', {
+                templateUrl: 'templates/login.html',
+                controller: "LoginController"
+            }).
+            when('/registration', {
+                templateUrl: 'templates/registration.html',
+                controller: "RegistrationController"
             }).
             otherwise({
-                redirectTo: '/'
+                redirectTo: '/home'
             });
     }]);
 
-// HS_Project.config(['RestangularProvider', 'CONFIG', function(RestangularProvider, CONFIG) {
-//     RestangularProvider.setBaseUrl(CONFIG.API_URL);
-// }]);
-
-HS_Project.config(['$httpProvider', 'CONFIG', function($httpProvider, CONFIG) {
+HS.config(['$httpProvider', function($httpProvider) {
     //initialize get if not there
     if (!$httpProvider.defaults.headers.get) {
         $httpProvider.defaults.headers.get = {};
@@ -66,8 +70,32 @@ HS_Project.config(['$httpProvider', 'CONFIG', function($httpProvider, CONFIG) {
     $httpProvider.defaults.headers.get['Expires'] = 0;
 }]);
 
-HS_Project.run(['$rootScope', '$scope', '$window', '$location', 'Restangular',
-    function ($rootScope, $scope, $window, $location, Restangular) {
-        alert('project is running');
+HS.config(['$translateProvider', 'CONFIG', function($translateProvider, CONFIG) {
+
+    $translateProvider.useStaticFilesLoader({
+        files: [{
+            prefix: 'assets/languages/',
+            suffix: '.json'
+        }]
+    });
+
+    $translateProvider.preferredLanguage(CONFIG.DEFAULT_LANGUAGE);
+    $translateProvider.useSanitizeValueStrategy('escapeParameters');
+}]);
+
+HS.run(['$rootScope', '$translate', '$timeout',
+    function ($rootScope, $translate, $timeout) {
+        $rootScope.switchLanguage = function(lang) {
+            $translate.use(lang);
+            LS.language = lang;
+            $rootScope.language = lang;
+            localStorage.setItem('HS', JSON.stringify(LS));
+        };
     }
 ]);
+
+HS.filter("sanitize", ['$sce', function($sce) {
+    return function(htmlCode){
+        return $sce.trustAsHtml(htmlCode);
+    }
+}]);

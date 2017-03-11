@@ -1,0 +1,26 @@
+<div id="registration">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form name="registration">
+                    <fieldset>
+                        <div class="form-group" ng-class="{'has-error': registration.name.$error.onlyEnglishNumbers}">
+                            <label for="name" class="col-md-6">{{'REGISTRATION.NAME' | translate}}</label>
+                            <input type="text"  name="name" id="name" class="col-md-6"
+                                  ng-model="name" required only-english-numbers/>
+                            <span class="help-block" ng-show="registration.name.$error.onlyEnglishNumbers">
+                               {{'ERRORS.REGISTRATION.NAME' | translate}}</span>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error': registration.email.$error.checkEmail}">
+                            <label for="email" class="col-md-6">{{'REGISTRATION.EMAIL' | translate}}</label>
+                            <input type="email" name="email" id="email" class="col-md-6"
+                                  ng-model="email" required check-email />
+                            <span class="help-block" ng-show="registration.email.$error.checkEmail">
+                               {{'ERRORS.REGISTRATION.EMAIL' | translate}}</span>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
