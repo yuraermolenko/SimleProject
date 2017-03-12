@@ -16,12 +16,16 @@ HSControllers.controller('LobbyController', ['$scope', '$rootScope',
         $rootScope.title = 'Lobby';
 }]);
 
-HSControllers.controller('HeaderController', ['$scope', '$rootScope', '$translate',
-    function ($scope, $rootScope, $translate) {
+HSControllers.controller('HeaderController', ['$scope', '$rootScope', '$translate', '$location',
+    function ($scope, $rootScope, $translate, $location) {
         if(typeof LS.language != 'undefined') {
             $translate.use(LS.language);
             $rootScope.language = LS.language;
         }
+        $scope.path = $location.path().slice(1);
+        $scope.$on('$routeChangeStart', function () {
+            $scope.path = $location.path().slice(1);
+        })
 }]);
 
 HSControllers.controller('RegistrationController', ['$scope',

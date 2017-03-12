@@ -1,3 +1,76 @@
+$mc: #f2c146
+
 #header
-  background-color: #000
-  opacity: 0.9
+  .navbar-fixed-top
+    background: rgba(0,0,0,.8)
+
+  a.nav-header
+    color: #ffffff
+    font-size: 20px
+
+    &:hover
+      background: 0 0
+      color: $mc
+
+      &:before
+        height: 8px
+        background: $mc
+        transition: height ease .2s
+
+    &:focus
+      background: 0 0
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      height: 3px
+      background: 0 0
+
+    &.active
+      color: $mc
+
+      &:hover:before
+        height: 8px
+
+    &.active:before
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      height: 3px
+      transition: height ease .2s
+      background: $mc
+
+  .btn
+    padding: 10px 10px 10px 10px
+    background: $mc
+    color: #000
+    border: none
+
+  a.nav-button
+    color: #ffffff
+    font-size: 22px
+
+    &:hover
+      background: $mc
+      color: #000
+      transition: height ease .2s
+
+    &:focus
+      background: 0 0
+      color: $mc
+
+  .logo
+    padding: 10px
+
+    & strong
+      color: #ffffff
+      font-size: 30px
+
+    & .tilda
+      color: $mc
+      font-size: 30px

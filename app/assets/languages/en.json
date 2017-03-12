@@ -1,12 +1,15 @@
 {
   "REGISTRATION": {
+    "TITLE": "Register Now!",
     "NAME": "Name",
-    "EMAIL": "Email"
+    "EMAIL": "Email",
+    "NICK": "Your Nick in Hearthstone"
   },
   "HEADER": {
     "HOME": "Home",
     "LOBBY": "Lobby",
-    "SIGN_UP": "Sign Up!"
+    "SIGN_UP": "Sign Up",
+    "LOG_IN": "Log In"
   },
   "ERRORS": {
     "REGISTRATION": {

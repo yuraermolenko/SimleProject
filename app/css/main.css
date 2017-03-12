@@ -1,9 +1,88 @@
-#header {
-  background-color: #000;
-  opacity: 0.9; }
+#header .navbar-fixed-top {
+  background: rgba(0, 0, 0, 0.8); }
+#header a.nav-header {
+  color: #ffffff;
+  font-size: 20px; }
+  #header a.nav-header:hover {
+    background: 0 0;
+    color: #f2c146; }
+    #header a.nav-header:hover:before {
+      height: 8px;
+      background: #f2c146;
+      transition: height ease 0.2s; }
+  #header a.nav-header:focus {
+    background: 0 0; }
+  #header a.nav-header:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px;
+    background: 0 0; }
+  #header a.nav-header.active {
+    color: #f2c146; }
+    #header a.nav-header.active:hover:before {
+      height: 8px; }
+  #header a.nav-header.active:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px;
+    transition: height ease 0.2s;
+    background: #f2c146; }
+#header .btn {
+  padding: 10px 10px 10px 10px;
+  background: #f2c146;
+  color: #000;
+  border: none; }
+#header a.nav-button {
+  color: #ffffff;
+  font-size: 22px; }
+  #header a.nav-button:hover {
+    background: #f2c146;
+    color: #000;
+    transition: height ease 0.2s; }
+  #header a.nav-button:focus {
+    background: 0 0;
+    color: #f2c146; }
+#header .logo {
+  padding: 10px; }
+  #header .logo strong {
+    color: #ffffff;
+    font-size: 30px; }
+  #header .logo .tilda {
+    color: #f2c146;
+    font-size: 30px; }
 
 #registration {
   margin-top: 100px; }
+  #registration .title {
+    padding: 50px 0;
+    text-align: center; }
+    #registration .title h1 {
+      color: #ef912d;
+      font-size: 40px; }
+  #registration .form-group {
+    margin: 10px 0; }
+    #registration .form-group label {
+      width: 39%;
+      font-size: 18px;
+      color: #edd393; }
+    #registration .form-group input {
+      width: 60%;
+      background: 0 0;
+      border-radius: 0;
+      border: 1px dashed #ef912d;
+      padding: 5px 8px;
+      color: #edd393; }
+      #registration .form-group input:focus {
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+        outline: none; }
+    #registration .form-group .help-block {
+      margin-left: 40%; }
 
 body {
   background: url(../assets/img/bg-main.jpg) center top no-repeat #000; }

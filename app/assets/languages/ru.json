@@ -1,12 +1,15 @@
 {
   "REGISTRATION": {
+    "TITLE": "Зарегистрируйся прямо сейчас!",
     "NAME": "Имя",
-    "EMAIL": "Email"
+    "EMAIL": "Email",
+    "NICK": "Твой ник в Hearthstone"
   },
   "HEADER": {
     "HOME": "Главная",
     "LOBBY": "Лобби",
-    "SIGN_UP": "Зарегистрируйся сейчас!"
+    "SIGN_UP": "Регистрация",
+    "LOG_IN": "Войти"
   },
   "ERRORS": {
     "REGISTRATION": {
