@@ -34,6 +34,15 @@
                                {{'ERRORS.REGISTRATION.NAME' | translate}}</span>
                             </div>
                         </div>
+                        <div class="row row-eq-height">
+                            <div class="form-group" ng-class="{'has-error' : registration.pass.$error.passwordMinSixSymbols}">
+                                <label for="pass">{{'REGISTRATION.PASS' | translate}}</label>
+                                <input type="password" name="pass" id="pass"
+                                       ng-model="pass" required password-min-six-symbols />
+                                <span class="help-block" ng-show="registration.pass.$error.passwordMinSixSymbols">
+                                    {{'ERRORS.REGISTRATION.PASS' | translate}}</span>
+                            </div>
+                        </div>
                     </fieldset>
                 </form>
             </div>

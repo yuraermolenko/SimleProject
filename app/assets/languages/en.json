@@ -3,7 +3,9 @@
     "TITLE": "Register Now!",
     "NAME": "Name",
     "EMAIL": "Email",
-    "NICK": "Your Nick in Hearthstone"
+    "NICK": "Your Nick in Hearthstone",
+    "PASS": "Password"
+
   },
   "HEADER": {
     "HOME": "Home",
@@ -14,7 +16,9 @@
   "ERRORS": {
     "REGISTRATION": {
       "NAME": "Please use only english characters and numbers",
-      "EMAIL": "Incorrect Email"
+      "EMAIL": "Incorrect Email",
+      "PASS": "Must be at least 6 symbols"
+
     }
   }
 }

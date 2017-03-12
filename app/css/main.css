@@ -67,6 +67,8 @@
       font-size: 40px; }
   #registration .form-group {
     margin: 10px 0; }
+    #registration .form-group.has-error input {
+      border: 1px solid #a94442; }
     #registration .form-group label {
       width: 39%;
       font-size: 18px;

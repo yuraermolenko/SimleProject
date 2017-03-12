@@ -50,3 +50,17 @@ HSDirectives.directive('checkEmail', [function() {
         }
     }
 }]);
+
+HSDirectives.directive('passwordMinSixSymbols', [function () {
+    return {
+        require: 'ngModel',
+        link: function(scope, element, attrs, ctrl) {
+            //Comment to test digest
+            scope.$watch(attrs.ngModel, function () {
+                ctrl.$validators.passwordMinSixSymbols = function(modelValue, viewValue) {
+                    return (typeof modelValue.length == 'undefined') ? !ctrl.$isEmpty(modelValue) && modelValue.toString().length > 5 : !ctrl.$isEmpty(modelValue) && modelValue.length > 5 ;
+                };
+            }, true);
+        }
+    }
+}]);
