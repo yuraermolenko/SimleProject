@@ -5,10 +5,10 @@
   font-size: 20px; }
   #header a.nav-header:hover {
     background: 0 0;
-    color: #f2c146; }
+    color: #ef912d; }
     #header a.nav-header:hover:before {
       height: 8px;
-      background: #f2c146;
+      background: #ef912d;
       transition: height ease 0.2s; }
   #header a.nav-header:focus {
     background: 0 0; }
@@ -21,7 +21,7 @@
     height: 3px;
     background: 0 0; }
   #header a.nav-header.active {
-    color: #f2c146; }
+    color: #ef912d; }
     #header a.nav-header.active:hover:before {
       height: 8px; }
   #header a.nav-header.active:before {
@@ -32,31 +32,31 @@
     top: 0;
     height: 3px;
     transition: height ease 0.2s;
-    background: #f2c146; }
+    background: #ef912d; }
 #header .btn {
   padding: 10px 10px 10px 10px;
-  background: #f2c146;
+  background: #ef912d;
   color: #000;
   border: none; }
 #header a.nav-button {
   color: #ffffff;
   font-size: 22px; }
   #header a.nav-button.active {
-    color: #f2c146; }
+    color: #ef912d; }
   #header a.nav-button:hover {
-    background: #f2c146;
+    background: #ef912d;
     color: #000;
     transition: height ease 0.2s; }
   #header a.nav-button:focus {
     background: 0 0;
-    color: #f2c146; }
+    color: #ef912d; }
 #header .logo {
   padding: 10px; }
   #header .logo strong {
     color: #ffffff;
     font-size: 30px; }
   #header .logo .tilda {
-    color: #f2c146;
+    color: #ef912d;
     font-size: 30px; }
 
 #registration {
