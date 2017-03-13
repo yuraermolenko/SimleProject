@@ -41,6 +41,8 @@
 #header a.nav-button {
   color: #ffffff;
   font-size: 22px; }
+  #header a.nav-button.active {
+    color: #f2c146; }
   #header a.nav-button:hover {
     background: #f2c146;
     color: #000;
@@ -58,7 +60,7 @@
     font-size: 30px; }
 
 #registration {
-  margin-top: 100px; }
+  margin-top: 50px; }
   #registration .title {
     padding: 50px 0;
     text-align: center; }
@@ -67,24 +69,35 @@
       font-size: 40px; }
   #registration .form-group {
     margin: 10px 0; }
-    #registration .form-group.has-error input {
+    #registration .form-group.has-error .text {
       border: 1px solid #a94442; }
     #registration .form-group label {
       width: 39%;
       font-size: 18px;
       color: #edd393; }
-    #registration .form-group input {
+    #registration .form-group .text {
       width: 60%;
       background: 0 0;
       border-radius: 0;
       border: 1px dashed #ef912d;
       padding: 5px 8px;
       color: #edd393; }
-      #registration .form-group input:focus {
+      #registration .form-group .text:focus {
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
         outline: none; }
     #registration .form-group .help-block {
       margin-left: 40%; }
+
+#register {
+  padding: 8px 30px;
+  width: 100%;
+  background: #ef912d;
+  color: black;
+  box-shadow: none;
+  border: 0;
+  font-size: 24px; }
+  #register:hover {
+    background: #edd393; }
 
 body {
   background: url(../assets/img/bg-main.jpg) center top no-repeat #000; }

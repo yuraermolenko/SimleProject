@@ -1,41 +1,43 @@
 <div id="header">
-    <nav class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="row row-eq-height">
-                <div class="col-md-2 text-center">
-                    <span class="logo">
-                        <strong>Ma</strong><span class="tilda"> ~</span>
-                    </span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a class="nav-header" href="#!/home" ng-class="{'active': path === 'home'}">
-                                {{"HEADER.HOME" | translate}}</a>
-                        </li>
-                        <li>
-                            <a class="nav-header" href="#!/lobby" ng-class="{'active': path === 'lobby'}">
-                                {{"HEADER.LOBBY" | translate}}</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a class="nav-button" href="#!/registration">{{"HEADER.SIGN_UP" | translate}}</a>
-                        </li>
-                        <li>
-                            <a class="nav-button" href="#!/login">{{"HEADER.LOG_IN" | translate}}</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <div class="language-switcher">
-                        <button class="btn" ng-click="switchLanguage('en')">en</button>
-                        <button class="btn" ng-click="switchLanguage('ru')">ru</button>
-                    </div>
-                </div>
-            </div>
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row row-eq-height">
+        <div class="col-md-2 text-center">
+          <span class="logo">
+            <strong>Ma</strong><span class="tilda"> ~</span>
+          </span>
         </div>
-    </nav>
+        <div class="col-md-4">
+          <ul class="nav navbar-nav">
+            <li>
+              <a class="nav-header" href="#!/home" ng-class="{'active': path === 'home'}">
+                {{"HEADER.HOME" | translate}}</a>
+            </li>
+            <li>
+              <a class="nav-header" href="#!/lobby" ng-class="{'active': path === 'lobby'}">
+                {{"HEADER.LOBBY" | translate}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="nav navbar-nav">
+            <li>
+              <a class="nav-button" href="#!/registration" ng-class="{'active': path === 'registration'}">
+                {{"HEADER.SIGN_UP" | translate}}</a>
+            </li>
+            <li>
+              <a class="nav-button" href="#!/login" ng-class="{'active': path === 'login'}">
+                {{"HEADER.LOG_IN" | translate}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <div class="language-switcher">
+            <button class="btn" ng-click="switchLanguage('en')">en</button>
+            <button class="btn" ng-click="switchLanguage('ru')">ru</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 </div>

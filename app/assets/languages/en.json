@@ -4,8 +4,9 @@
     "NAME": "Name",
     "EMAIL": "Email",
     "NICK": "Your Nick in Hearthstone",
-    "PASS": "Password"
-
+    "PASS": "Password",
+    "REPASS": "Password verify",
+    "SUBMIT": "Submit"
   },
   "HEADER": {
     "HOME": "Home",
@@ -17,8 +18,8 @@
     "REGISTRATION": {
       "NAME": "Please use only english characters and numbers",
       "EMAIL": "Incorrect Email",
-      "PASS": "Must be at least 6 symbols"
-
+      "PASS": "Must be at least 6 symbols",
+      "REPASS": "Doesn`t match"
     }
   }
 }

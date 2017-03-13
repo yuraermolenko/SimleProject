@@ -1,51 +1,72 @@
 <div id="registration">
-    <div class="container">
-        <div class="row">
-            <div class="title">
-                <h1>{{"REGISTRATION.TITLE" | translate}}</h1>
+  <div class="container">
+    <div class="row">
+      <div class="title">
+        <h1>{{"REGISTRATION.TITLE" | translate}}</h1>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <form name="registration">
+          <fieldset>
+            <div class="row">
+              <div class="form-group"
+                   ng-class="{'has-error': registration.name.$error.onlyEnglishNumbers}">
+                <label for="name">{{'REGISTRATION.NAME' | translate}}</label>
+                <input class="text" type="text" name="name" id="name"
+                       ng-model="user.name" required only-english-numbers/>
+							  <span class="help-block" ng-show="registration.name.$error.onlyEnglishNumbers">
+                    {{'ERRORS.REGISTRATION.NAME' | translate}}</span>
+              </div>
             </div>
-            <div class="col-md-6 col-md-offset-3">
-                <form name="registration">
-                    <fieldset>
-                        <div class="row">
-                            <div class="form-group" ng-class="{'has-error': registration.name.$error.onlyEnglishNumbers}">
-                                <label for="name">{{'REGISTRATION.NAME' | translate}}</label>
-                                <input type="text"  name="name" id="name"
-                                       ng-model="name" required only-english-numbers/>
-                            <span class="help-block" ng-show="registration.name.$error.onlyEnglishNumbers">
-                               {{'ERRORS.REGISTRATION.NAME' | translate}}</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group" ng-class="{'has-error': registration.email.$error.checkEmail}">
-                                <label for="email">{{'REGISTRATION.EMAIL' | translate}}</label>
-                                <input type="email" name="email" id="email"
-                                       ng-model="email" required check-email />
-                            <span class="help-block" ng-show="registration.email.$error.checkEmail">
-                               {{'ERRORS.REGISTRATION.EMAIL' | translate}}</span>
-                            </div>
-                        </div>
-                        <div class="row row-eq-height">
-                            <div class="form-group" ng-class="{'has-error': registration.nick.$error.onlyEnglishNumbers}">
-                                <label for="nick">{{'REGISTRATION.NICK' | translate}}</label>
-                                <input type="text" name="nick" id="nick"
-                                       ng-model="nick" required only-english-numbers />
-                            <span class="help-block" ng-show="registration.nick.$error.onlyEnglishNumbers">
-                               {{'ERRORS.REGISTRATION.NAME' | translate}}</span>
-                            </div>
-                        </div>
-                        <div class="row row-eq-height">
-                            <div class="form-group" ng-class="{'has-error' : registration.pass.$error.passwordMinSixSymbols}">
-                                <label for="pass">{{'REGISTRATION.PASS' | translate}}</label>
-                                <input type="password" name="pass" id="pass"
-                                       ng-model="pass" required password-min-six-symbols />
-                                <span class="help-block" ng-show="registration.pass.$error.passwordMinSixSymbols">
-                                    {{'ERRORS.REGISTRATION.PASS' | translate}}</span>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
+            <div class="row">
+              <div class="form-group"
+                   ng-class="{'has-error': registration.email.$error.checkEmail}">
+                <label for="email">{{'REGISTRATION.EMAIL' | translate}}</label>
+                <input class="text" type="email" name="email" id="email"
+                       ng-model="user.email" required check-email/>
+                <span class="help-block" ng-show="registration.email.$error.checkEmail">
+                   {{'ERRORS.REGISTRATION.EMAIL' | translate}}</span>
+              </div>
             </div>
-        </div>
+            <div class="row row-eq-height">
+              <div class="form-group"
+                   ng-class="{'has-error': registration.nick.$error.onlyEnglishNumbers}">
+                <label for="nick">{{'REGISTRATION.NICK' | translate}}</label>
+                <input class="text" type="text" name="nick" id="nick"
+                       ng-model="user.nick" required only-english-numbers/>
+                <span class="help-block" ng-show="registration.nick.$error.onlyEnglishNumbers">
+                   {{'ERRORS.REGISTRATION.NAME' | translate}}</span>
+              </div>
+            </div>
+            <div class="row row-eq-height">
+              <div class="form-group"
+                   ng-class="{'has-error' : registration.pass.$error.passwordMinSixSymbols}">
+                <label for="pass">{{'REGISTRATION.PASS' | translate}}</label>
+                <input class="text" type="password" name="pass" id="pass"
+                       ng-model="user.pass" required password-min-six-symbols/>
+								<span class="help-block" ng-show="registration.pass.$error.passwordMinSixSymbols">
+									{{'ERRORS.REGISTRATION.PASS' | translate}}</span>
+              </div>
+            </div>
+            <div class="row row-eq-height">
+              <div class="form-group"
+                   ng-class="{'has-error' : registration.repass.$error.pwmatch}">
+                <label for="repass">{{'REGISTRATION.REPASS' | translate}}</label>
+                <input class="text" type="password" name="repass" id="repass"
+                       ng-model="user.repass" required check-identical="pass"/>
+								<span class="help-block" ng-show="registration.repass.$error.pwmatch">
+                  {{'ERRORS.REGISTRATION.REPASS' | translate}}</span>
+              </div>
+            </div>
+            <div class="row row-eq-height">
+              <div class="form-group">
+                <button class="submit" type="submit" name="register" id="register"
+                       ng-click="submit()" ng-disabled="registration.$invalid">
+                  {{"REGISTRATION.SUBMIT" | translate}}</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
