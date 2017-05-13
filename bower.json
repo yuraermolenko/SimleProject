@@ -26,6 +26,6 @@
     "jquery.ajax.binary": "v0.0.1",
     "ng-file-upload": "11.2.3",
     "file-saver.js": "1.20150507.2",
-    "angular-ckeditor":"1.0.3"
+    "angular-ckeditor": "1.0.3"
   }
 }

@@ -1,5 +1,6 @@
 #header .navbar-fixed-top {
   background: rgba(0, 0, 0, 0.8); }
+
 #header a.nav-header {
   color: #ffffff;
   font-size: 20px; }
@@ -9,11 +10,11 @@
     #header a.nav-header:hover:before {
       height: 8px;
       background: #f2c146;
-      transition: height ease 0.2s; }
+      transition: height ease .2s; }
   #header a.nav-header:focus {
     background: 0 0; }
   #header a.nav-header:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
@@ -25,19 +26,21 @@
     #header a.nav-header.active:hover:before {
       height: 8px; }
   #header a.nav-header.active:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     height: 3px;
-    transition: height ease 0.2s;
+    transition: height ease .2s;
     background: #f2c146; }
+
 #header .btn {
   padding: 10px 10px 10px 10px;
   background: #f2c146;
   color: #000;
   border: none; }
+
 #header a.nav-button {
   color: #ffffff;
   font-size: 22px; }
@@ -46,10 +49,11 @@
   #header a.nav-button:hover {
     background: #f2c146;
     color: #000;
-    transition: height ease 0.2s; }
+    transition: height ease .2s; }
   #header a.nav-button:focus {
     background: 0 0;
     color: #f2c146; }
+
 #header .logo {
   padding: 10px; }
   #header .logo strong {
@@ -104,6 +108,11 @@ body {
 
 .main-view {
   margin-top: 50px;
-  font-family: industrybook, Arial, sans-serif; }
-
+  font-family: industrybook, Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  transition: all .5s; }
 /*# sourceMappingURL=main.css.map */

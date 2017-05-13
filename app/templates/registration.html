@@ -13,7 +13,7 @@
                 <label for="name">{{'REGISTRATION.NAME' | translate}}</label>
                 <input class="text" type="text" name="name" id="name"
                        ng-model="user.name" required only-english-numbers/>
-							  <span class="help-block" ng-show="registration.name.$error.onlyEnglishNumbers">
+                <span class="help-block" ng-show="registration.name.$error.onlyEnglishNumbers">
                     {{'ERRORS.REGISTRATION.NAME' | translate}}</span>
               </div>
             </div>
@@ -43,7 +43,7 @@
                 <label for="pass">{{'REGISTRATION.PASS' | translate}}</label>
                 <input class="text" type="password" name="pass" id="pass"
                        ng-model="user.pass" required password-min-six-symbols/>
-								<span class="help-block" ng-show="registration.pass.$error.passwordMinSixSymbols">
+                <span class="help-block" ng-show="registration.pass.$error.passwordMinSixSymbols">
 									{{'ERRORS.REGISTRATION.PASS' | translate}}</span>
               </div>
             </div>
@@ -53,15 +53,16 @@
                 <label for="repass">{{'REGISTRATION.REPASS' | translate}}</label>
                 <input class="text" type="password" name="repass" id="repass"
                        ng-model="user.repass" required check-identical="pass"/>
-								<span class="help-block" ng-show="registration.repass.$error.pwmatch">
+                <span class="help-block" ng-show="registration.repass.$error.pwmatch">
                   {{'ERRORS.REGISTRATION.REPASS' | translate}}</span>
               </div>
             </div>
             <div class="row row-eq-height">
               <div class="form-group">
                 <button class="submit" type="submit" name="register" id="register"
-                       ng-click="submit()" ng-disabled="registration.$invalid">
-                  {{"REGISTRATION.SUBMIT" | translate}}</button>
+                        ng-click="submit()" ng-disabled="registration.$invalid">
+                  {{"REGISTRATION.SUBMIT" | translate}}
+                </button>
               </div>
             </div>
           </fieldset>
